@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Algorithm Visualizations</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #1e1e1e;
+            color: white;
+            margin: 0;
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        header {
+            text-align: center;
+            max-width: 800px;
+            margin-bottom: 50px;
+        }
+        h1 {
+            font-size: 2.5rem;
+            color: #4CAF50;
+            margin-bottom: 10px;
+        }
+        p.subtitle {
+            color: #aaa;
+            font-size: 1.2rem;
+            line-height: 1.5;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 25px;
+            width: 100%;
+            max-width: 1000px;
+        }
+        .card {
+            background: #2d2d2d;
+            border: 1px solid #444;
+            border-radius: 10px;
+            padding: 25px;
+            text-decoration: none;
+            color: white;
+            transition: transform 0.2s, box-shadow 0.2s;
+            display: flex;
+            flex-direction: column;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+            border-color: #4CAF50;
+        }
+        .card h2 {
+            margin-top: 0;
+            font-size: 1.4rem;
+            color: #2196F3;
+        }
+        .card p {
+            color: #ccc;
+            flex-grow: 1;
+            line-height: 1.4;
+        }
+        .tags {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+        .tag {
+            background: #444;
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+        /* Tag Colors */
+        .tag.binary-search { color: #ffd700; background: rgba(255, 215, 0, 0.1); }
+        .tag.backtracking { color: #ff9800; background: rgba(255, 152, 0, 0.1); }
+        .tag.dp { color: #e91e63; background: rgba(233, 30, 99, 0.1); }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Interactive Algorithm Visualizations</h1>
+        <p class="subtitle">A collection of single-file web applications designed to teach complex Computer Science algorithms through interactive, step-by-step visual metaphors.</p>
+    </header>
+
+    <div class="grid">
+        <!-- Card 1: Job Scheduling -->
+        <a href="src/real_algorithm_v4.html" class="card">
+            <h2>Find Minimum Time to Finish All Jobs</h2>
+            <p>Distribute jobs among workers to minimize the maximum workload. Features real-time recursive failure and symmetry-breaking pruning.</p>
+            <div class="tags">
+                <span class="tag binary-search">Binary Search</span>
+                <span class="tag backtracking">Backtracking (DFS)</span>
+            </div>
+        </a>
+
+        <!-- Card 2: Placeholder for your next visualizer -->
+        <a href="#" class="card" style="border: 1px dashed #666; background: #252525;">
+            <h2 style="color: #666;">Coming Soon...</h2>
+            <p style="color: #666;">Use the master prompt to generate your next algorithm visualizer and link it here!</p>
+            <div class="tags">
+                <span class="tag dp">Dynamic Programming</span>
+            </div>
+        </a>
+    </div>
+
+</body>
+</html>
